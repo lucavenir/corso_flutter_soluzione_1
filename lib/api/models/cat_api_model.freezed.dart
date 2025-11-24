@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'http_status_api_model.dart';
+part of 'cat_api_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -12,40 +12,40 @@ part of 'http_status_api_model.dart';
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
-mixin _$HttpStatusApiModel {
+mixin _$CatApiModel {
 
- int get code; String get description;
-/// Create a copy of HttpStatusApiModel
+ String get id; String get url; int get width; int get height;
+/// Create a copy of CatApiModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$HttpStatusApiModelCopyWith<HttpStatusApiModel> get copyWith => _$HttpStatusApiModelCopyWithImpl<HttpStatusApiModel>(this as HttpStatusApiModel, _$identity);
+$CatApiModelCopyWith<CatApiModel> get copyWith => _$CatApiModelCopyWithImpl<CatApiModel>(this as CatApiModel, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is HttpStatusApiModel&&(identical(other.code, code) || other.code == code)&&(identical(other.description, description) || other.description == description));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CatApiModel&&(identical(other.id, id) || other.id == id)&&(identical(other.url, url) || other.url == url)&&(identical(other.width, width) || other.width == width)&&(identical(other.height, height) || other.height == height));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,code,description);
+int get hashCode => Object.hash(runtimeType,id,url,width,height);
 
 @override
 String toString() {
-  return 'HttpStatusApiModel(code: $code, description: $description)';
+  return 'CatApiModel(id: $id, url: $url, width: $width, height: $height)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $HttpStatusApiModelCopyWith<$Res>  {
-  factory $HttpStatusApiModelCopyWith(HttpStatusApiModel value, $Res Function(HttpStatusApiModel) _then) = _$HttpStatusApiModelCopyWithImpl;
+abstract mixin class $CatApiModelCopyWith<$Res>  {
+  factory $CatApiModelCopyWith(CatApiModel value, $Res Function(CatApiModel) _then) = _$CatApiModelCopyWithImpl;
 @useResult
 $Res call({
- int code, String description
+ String id, String url, int width, int height
 });
 
 
@@ -53,28 +53,30 @@ $Res call({
 
 }
 /// @nodoc
-class _$HttpStatusApiModelCopyWithImpl<$Res>
-    implements $HttpStatusApiModelCopyWith<$Res> {
-  _$HttpStatusApiModelCopyWithImpl(this._self, this._then);
+class _$CatApiModelCopyWithImpl<$Res>
+    implements $CatApiModelCopyWith<$Res> {
+  _$CatApiModelCopyWithImpl(this._self, this._then);
 
-  final HttpStatusApiModel _self;
-  final $Res Function(HttpStatusApiModel) _then;
+  final CatApiModel _self;
+  final $Res Function(CatApiModel) _then;
 
-/// Create a copy of HttpStatusApiModel
+/// Create a copy of CatApiModel
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? code = null,Object? description = null,}) {
-  return _then(HttpStatusApiModel(
-code: null == code ? _self.code : code // ignore: cast_nullable_to_non_nullable
-as int,description: null == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String,
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? url = null,Object? width = null,Object? height = null,}) {
+  return _then(CatApiModel(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
+as String,width: null == width ? _self.width : width // ignore: cast_nullable_to_non_nullable
+as int,height: null == height ? _self.height : height // ignore: cast_nullable_to_non_nullable
+as int,
   ));
 }
 
 }
 
 
-/// Adds pattern-matching-related methods to [HttpStatusApiModel].
-extension HttpStatusApiModelPatterns on HttpStatusApiModel {
+/// Adds pattern-matching-related methods to [CatApiModel].
+extension CatApiModelPatterns on CatApiModel {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:

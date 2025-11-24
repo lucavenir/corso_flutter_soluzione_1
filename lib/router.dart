@@ -1,5 +1,6 @@
 import "package:color_changer/pages/cart_page.dart";
 import "package:color_changer/pages/cat_page.dart";
+import "package:color_changer/pages/cats_page.dart";
 import "package:color_changer/pages/color_changer_page.dart";
 import "package:color_changer/pages/contact_page.dart";
 import "package:color_changer/pages/home_page.dart";
@@ -68,7 +69,13 @@ final router = GoRouter(
       },
     ),
     GoRoute(
-      path: "/cat/:status",
+      path: "/cats",
+      builder: (context, state) {
+        return const CatsPage();
+      },
+    ),
+    GoRoute(
+      path: "/cats/:status",
       builder: (context, state) {
         return const CatPage(status: 404);
       },

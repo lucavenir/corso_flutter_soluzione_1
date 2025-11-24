@@ -15,13 +15,11 @@ const catsProvider = CatsProvider._();
 final class CatsProvider
     extends
         $FunctionalProvider<
-          AsyncValue<List<HttpStatusApiModel>>,
-          List<HttpStatusApiModel>,
-          FutureOr<List<HttpStatusApiModel>>
+          AsyncValue<List<CatModel>>,
+          List<CatModel>,
+          FutureOr<List<CatModel>>
         >
-    with
-        $FutureModifier<List<HttpStatusApiModel>>,
-        $FutureProvider<List<HttpStatusApiModel>> {
+    with $FutureModifier<List<CatModel>>, $FutureProvider<List<CatModel>> {
   const CatsProvider._()
     : super(
         from: null,
@@ -38,14 +36,14 @@ final class CatsProvider
 
   @$internal
   @override
-  $FutureProviderElement<List<HttpStatusApiModel>> $createElement(
+  $FutureProviderElement<List<CatModel>> $createElement(
     $ProviderPointer pointer,
   ) => $FutureProviderElement(pointer);
 
   @override
-  FutureOr<List<HttpStatusApiModel>> create(Ref ref) {
+  FutureOr<List<CatModel>> create(Ref ref) {
     return cats(ref);
   }
 }
 
-String _$catsHash() => r'b7aa0c7301c86e07bb0d316541ec059941175f6d';
+String _$catsHash() => r'6740a72f48c5cafca0f14460b673164b4df8fe3c';

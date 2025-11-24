@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'http_list_api_model.dart';
+part of 'cat_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -12,40 +12,40 @@ part of 'http_list_api_model.dart';
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
-mixin _$HttpListApiModel {
+mixin _$CatModel {
 
- List<HttpStatusApiModel> get statusCodes;
-/// Create a copy of HttpListApiModel
+ String get id; String get imageUrl; int get width; int get height;
+/// Create a copy of CatModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$HttpListApiModelCopyWith<HttpListApiModel> get copyWith => _$HttpListApiModelCopyWithImpl<HttpListApiModel>(this as HttpListApiModel, _$identity);
+$CatModelCopyWith<CatModel> get copyWith => _$CatModelCopyWithImpl<CatModel>(this as CatModel, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is HttpListApiModel&&const DeepCollectionEquality().equals(other.statusCodes, statusCodes));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CatModel&&(identical(other.id, id) || other.id == id)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.width, width) || other.width == width)&&(identical(other.height, height) || other.height == height));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(statusCodes));
+int get hashCode => Object.hash(runtimeType,id,imageUrl,width,height);
 
 @override
 String toString() {
-  return 'HttpListApiModel(statusCodes: $statusCodes)';
+  return 'CatModel(id: $id, imageUrl: $imageUrl, width: $width, height: $height)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $HttpListApiModelCopyWith<$Res>  {
-  factory $HttpListApiModelCopyWith(HttpListApiModel value, $Res Function(HttpListApiModel) _then) = _$HttpListApiModelCopyWithImpl;
+abstract mixin class $CatModelCopyWith<$Res>  {
+  factory $CatModelCopyWith(CatModel value, $Res Function(CatModel) _then) = _$CatModelCopyWithImpl;
 @useResult
 $Res call({
- List<HttpStatusApiModel> statusCodes
+ String id, String imageUrl, int width, int height
 });
 
 
@@ -53,27 +53,30 @@ $Res call({
 
 }
 /// @nodoc
-class _$HttpListApiModelCopyWithImpl<$Res>
-    implements $HttpListApiModelCopyWith<$Res> {
-  _$HttpListApiModelCopyWithImpl(this._self, this._then);
+class _$CatModelCopyWithImpl<$Res>
+    implements $CatModelCopyWith<$Res> {
+  _$CatModelCopyWithImpl(this._self, this._then);
 
-  final HttpListApiModel _self;
-  final $Res Function(HttpListApiModel) _then;
+  final CatModel _self;
+  final $Res Function(CatModel) _then;
 
-/// Create a copy of HttpListApiModel
+/// Create a copy of CatModel
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? statusCodes = null,}) {
-  return _then(HttpListApiModel(
-statusCodes: null == statusCodes ? _self.statusCodes : statusCodes // ignore: cast_nullable_to_non_nullable
-as List<HttpStatusApiModel>,
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? imageUrl = null,Object? width = null,Object? height = null,}) {
+  return _then(CatModel(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,imageUrl: null == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String,width: null == width ? _self.width : width // ignore: cast_nullable_to_non_nullable
+as int,height: null == height ? _self.height : height // ignore: cast_nullable_to_non_nullable
+as int,
   ));
 }
 
 }
 
 
-/// Adds pattern-matching-related methods to [HttpListApiModel].
-extension HttpListApiModelPatterns on HttpListApiModel {
+/// Adds pattern-matching-related methods to [CatModel].
+extension CatModelPatterns on CatModel {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:

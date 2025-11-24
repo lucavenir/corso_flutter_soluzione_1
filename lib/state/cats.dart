@@ -1,21 +1,16 @@
 import "package:color_changer/api/cat_api.dart";
-import "package:color_changer/api/models/http_status_api_model.dart";
-import "package:dio/dio.dart";
+import "package:color_changer/api/http_client.dart";
+import "package:color_changer/models/cat_model.dart";
+import "package:color_changer/repositories/cat_repository.dart";
 import "package:riverpod_annotation/riverpod_annotation.dart";
 
 part "cats.g.dart";
 
 @riverpod
-Future<List<HttpStatusApiModel>> cats(Ref ref) async {
-  final client = Dio(
-    BaseOptions(
-      baseUrl: "https://http.cat",
-    ),
-  );
+Future<List<CatModel>> cats(Ref ref) {
+  final client = ref.watch(httpClientProvider);
+  final api = ref.watch(catApiProvider(client));
+  final repository = ref.watch(catRepositoryProvider(api: api));
 
-  final api = CatApi(client);
-
-  final response = await api.list();
-
-  return response.statusCodes;
+  return repository.fetchCats();
 }
