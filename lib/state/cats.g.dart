@@ -46,4 +46,4 @@ final class CatsProvider
   }
 }
 
-String _$catsHash() => r'6740a72f48c5cafca0f14460b673164b4df8fe3c';
+String _$catsHash() => r'204457a8e97c50b7a2fa891be4df2fbcb3d5b7e9';

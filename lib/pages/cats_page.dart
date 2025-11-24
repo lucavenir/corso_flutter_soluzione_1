@@ -27,7 +27,7 @@ class CatsPage extends ConsumerWidget {
                   children: [
                     Text("id: ${cat.id}"),
                     const SizedBox(height: 16),
-                    Image.network(cat.imageUrl),
+                    Image.network(cat.url),
                   ],
                 ),
           ],
