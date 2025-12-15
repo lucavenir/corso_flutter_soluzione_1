@@ -41,7 +41,7 @@ final class ReviewProvider
   }
 }
 
-String _$reviewHash() => r'5ba76d6e3cfe339615866ab3cd480549540bee07';
+String _$reviewHash() => r'0a5ad17b97e8eb56a628cdd239beca30c860b039';
 
 abstract class _$Review extends $Notifier<List<CharacterReviewModel>> {
   List<CharacterReviewModel> build();

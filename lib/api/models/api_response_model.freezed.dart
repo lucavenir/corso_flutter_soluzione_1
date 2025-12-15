@@ -13,22 +13,22 @@ part of 'api_response_model.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$ApiResponseModel {
+mixin _$RickAndMortyResponse {
 
  Info? get info; List<CharacterApiModel> get results;
-/// Create a copy of ApiResponseModel
+/// Create a copy of RickAndMortyResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$ApiResponseModelCopyWith<ApiResponseModel> get copyWith => _$ApiResponseModelCopyWithImpl<ApiResponseModel>(this as ApiResponseModel, _$identity);
+$RickAndMortyResponseCopyWith<RickAndMortyResponse> get copyWith => _$RickAndMortyResponseCopyWithImpl<RickAndMortyResponse>(this as RickAndMortyResponse, _$identity);
 
-  /// Serializes this ApiResponseModel to a JSON map.
+  /// Serializes this RickAndMortyResponse to a JSON map.
   Map<String, dynamic> toJson();
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ApiResponseModel&&(identical(other.info, info) || other.info == info)&&const DeepCollectionEquality().equals(other.results, results));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RickAndMortyResponse&&(identical(other.info, info) || other.info == info)&&const DeepCollectionEquality().equals(other.results, results));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -37,15 +37,15 @@ int get hashCode => Object.hash(runtimeType,info,const DeepCollectionEquality().
 
 @override
 String toString() {
-  return 'ApiResponseModel(info: $info, results: $results)';
+  return 'RickAndMortyResponse(info: $info, results: $results)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $ApiResponseModelCopyWith<$Res>  {
-  factory $ApiResponseModelCopyWith(ApiResponseModel value, $Res Function(ApiResponseModel) _then) = _$ApiResponseModelCopyWithImpl;
+abstract mixin class $RickAndMortyResponseCopyWith<$Res>  {
+  factory $RickAndMortyResponseCopyWith(RickAndMortyResponse value, $Res Function(RickAndMortyResponse) _then) = _$RickAndMortyResponseCopyWithImpl;
 @useResult
 $Res call({
  Info? info, List<CharacterApiModel> results
@@ -56,14 +56,14 @@ $InfoCopyWith<$Res>? get info;
 
 }
 /// @nodoc
-class _$ApiResponseModelCopyWithImpl<$Res>
-    implements $ApiResponseModelCopyWith<$Res> {
-  _$ApiResponseModelCopyWithImpl(this._self, this._then);
+class _$RickAndMortyResponseCopyWithImpl<$Res>
+    implements $RickAndMortyResponseCopyWith<$Res> {
+  _$RickAndMortyResponseCopyWithImpl(this._self, this._then);
 
-  final ApiResponseModel _self;
-  final $Res Function(ApiResponseModel) _then;
+  final RickAndMortyResponse _self;
+  final $Res Function(RickAndMortyResponse) _then;
 
-/// Create a copy of ApiResponseModel
+/// Create a copy of RickAndMortyResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? info = freezed,Object? results = null,}) {
   return _then(_self.copyWith(
@@ -72,7 +72,7 @@ as Info?,results: null == results ? _self.results : results // ignore: cast_null
 as List<CharacterApiModel>,
   ));
 }
-/// Create a copy of ApiResponseModel
+/// Create a copy of RickAndMortyResponse
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -88,8 +88,8 @@ $InfoCopyWith<$Res>? get info {
 }
 
 
-/// Adds pattern-matching-related methods to [ApiResponseModel].
-extension ApiResponseModelPatterns on ApiResponseModel {
+/// Adds pattern-matching-related methods to [RickAndMortyResponse].
+extension RickAndMortyResponsePatterns on RickAndMortyResponse {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -102,10 +102,10 @@ extension ApiResponseModelPatterns on ApiResponseModel {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ApiResponseModel value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _RickAndMortyResponse value)?  $default,{required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ApiResponseModel() when $default != null:
+case _RickAndMortyResponse() when $default != null:
 return $default(_that);case _:
   return orElse();
 
@@ -124,10 +124,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ApiResponseModel value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _RickAndMortyResponse value)  $default,){
 final _that = this;
 switch (_that) {
-case _ApiResponseModel():
+case _RickAndMortyResponse():
 return $default(_that);case _:
   throw StateError('Unexpected subclass');
 
@@ -145,10 +145,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ApiResponseModel value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _RickAndMortyResponse value)?  $default,){
 final _that = this;
 switch (_that) {
-case _ApiResponseModel() when $default != null:
+case _RickAndMortyResponse() when $default != null:
 return $default(_that);case _:
   return null;
 
@@ -168,7 +168,7 @@ return $default(_that);case _:
 
 @optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Info? info,  List<CharacterApiModel> results)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ApiResponseModel() when $default != null:
+case _RickAndMortyResponse() when $default != null:
 return $default(_that.info,_that.results);case _:
   return orElse();
 
@@ -189,7 +189,7 @@ return $default(_that.info,_that.results);case _:
 
 @optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Info? info,  List<CharacterApiModel> results)  $default,) {final _that = this;
 switch (_that) {
-case _ApiResponseModel():
+case _RickAndMortyResponse():
 return $default(_that.info,_that.results);case _:
   throw StateError('Unexpected subclass');
 
@@ -209,7 +209,7 @@ return $default(_that.info,_that.results);case _:
 
 @optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Info? info,  List<CharacterApiModel> results)?  $default,) {final _that = this;
 switch (_that) {
-case _ApiResponseModel() when $default != null:
+case _RickAndMortyResponse() when $default != null:
 return $default(_that.info,_that.results);case _:
   return null;
 
@@ -221,9 +221,9 @@ return $default(_that.info,_that.results);case _:
 /// @nodoc
 @JsonSerializable()
 
-class _ApiResponseModel implements ApiResponseModel {
-  const _ApiResponseModel({this.info, final  List<CharacterApiModel> results = const []}): _results = results;
-  factory _ApiResponseModel.fromJson(Map<String, dynamic> json) => _$ApiResponseModelFromJson(json);
+class _RickAndMortyResponse implements RickAndMortyResponse {
+  const _RickAndMortyResponse({this.info, final  List<CharacterApiModel> results = const []}): _results = results;
+  factory _RickAndMortyResponse.fromJson(Map<String, dynamic> json) => _$RickAndMortyResponseFromJson(json);
 
 @override final  Info? info;
  final  List<CharacterApiModel> _results;
@@ -234,20 +234,20 @@ class _ApiResponseModel implements ApiResponseModel {
 }
 
 
-/// Create a copy of ApiResponseModel
+/// Create a copy of RickAndMortyResponse
 /// with the given fields replaced by the non-null parameter values.
 @override @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$ApiResponseModelCopyWith<_ApiResponseModel> get copyWith => __$ApiResponseModelCopyWithImpl<_ApiResponseModel>(this, _$identity);
+_$RickAndMortyResponseCopyWith<_RickAndMortyResponse> get copyWith => __$RickAndMortyResponseCopyWithImpl<_RickAndMortyResponse>(this, _$identity);
 
 @override
 Map<String, dynamic> toJson() {
-  return _$ApiResponseModelToJson(this, );
+  return _$RickAndMortyResponseToJson(this, );
 }
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ApiResponseModel&&(identical(other.info, info) || other.info == info)&&const DeepCollectionEquality().equals(other._results, _results));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RickAndMortyResponse&&(identical(other.info, info) || other.info == info)&&const DeepCollectionEquality().equals(other._results, _results));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -256,15 +256,15 @@ int get hashCode => Object.hash(runtimeType,info,const DeepCollectionEquality().
 
 @override
 String toString() {
-  return 'ApiResponseModel(info: $info, results: $results)';
+  return 'RickAndMortyResponse(info: $info, results: $results)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$ApiResponseModelCopyWith<$Res> implements $ApiResponseModelCopyWith<$Res> {
-  factory _$ApiResponseModelCopyWith(_ApiResponseModel value, $Res Function(_ApiResponseModel) _then) = __$ApiResponseModelCopyWithImpl;
+abstract mixin class _$RickAndMortyResponseCopyWith<$Res> implements $RickAndMortyResponseCopyWith<$Res> {
+  factory _$RickAndMortyResponseCopyWith(_RickAndMortyResponse value, $Res Function(_RickAndMortyResponse) _then) = __$RickAndMortyResponseCopyWithImpl;
 @override @useResult
 $Res call({
  Info? info, List<CharacterApiModel> results
@@ -275,24 +275,24 @@ $Res call({
 
 }
 /// @nodoc
-class __$ApiResponseModelCopyWithImpl<$Res>
-    implements _$ApiResponseModelCopyWith<$Res> {
-  __$ApiResponseModelCopyWithImpl(this._self, this._then);
+class __$RickAndMortyResponseCopyWithImpl<$Res>
+    implements _$RickAndMortyResponseCopyWith<$Res> {
+  __$RickAndMortyResponseCopyWithImpl(this._self, this._then);
 
-  final _ApiResponseModel _self;
-  final $Res Function(_ApiResponseModel) _then;
+  final _RickAndMortyResponse _self;
+  final $Res Function(_RickAndMortyResponse) _then;
 
-/// Create a copy of ApiResponseModel
+/// Create a copy of RickAndMortyResponse
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? info = freezed,Object? results = null,}) {
-  return _then(_ApiResponseModel(
+  return _then(_RickAndMortyResponse(
 info: freezed == info ? _self.info : info // ignore: cast_nullable_to_non_nullable
 as Info?,results: null == results ? _self._results : results // ignore: cast_nullable_to_non_nullable
 as List<CharacterApiModel>,
   ));
 }
 
-/// Create a copy of ApiResponseModel
+/// Create a copy of RickAndMortyResponse
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')

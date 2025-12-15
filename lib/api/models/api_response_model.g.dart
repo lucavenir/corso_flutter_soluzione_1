@@ -6,22 +6,22 @@ part of 'api_response_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ApiResponseModel _$ApiResponseModelFromJson(Map<String, dynamic> json) =>
-    _ApiResponseModel(
-      info: json['info'] == null
-          ? null
-          : Info.fromJson(json['info'] as Map<String, dynamic>),
-      results:
-          (json['results'] as List<dynamic>?)
-              ?.map(
-                (e) => CharacterApiModel.fromJson(e as Map<String, dynamic>),
-              )
-              .toList() ??
-          const [],
-    );
+_RickAndMortyResponse _$RickAndMortyResponseFromJson(
+  Map<String, dynamic> json,
+) => _RickAndMortyResponse(
+  info: json['info'] == null
+      ? null
+      : Info.fromJson(json['info'] as Map<String, dynamic>),
+  results:
+      (json['results'] as List<dynamic>?)
+          ?.map((e) => CharacterApiModel.fromJson(e as Map<String, dynamic>))
+          .toList() ??
+      const [],
+);
 
-Map<String, dynamic> _$ApiResponseModelToJson(_ApiResponseModel instance) =>
-    <String, dynamic>{'info': instance.info, 'results': instance.results};
+Map<String, dynamic> _$RickAndMortyResponseToJson(
+  _RickAndMortyResponse instance,
+) => <String, dynamic>{'info': instance.info, 'results': instance.results};
 
 _Info _$InfoFromJson(Map<String, dynamic> json) => _Info(
   count: (json['count'] as num?)?.toInt(),

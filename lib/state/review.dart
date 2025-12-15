@@ -11,18 +11,23 @@ class Review extends _$Review {
     return [];
   }
 
-  void addReview(Character character, Map<String, Object?> formValue) {
-    final review = CharacterReviewModel(
+  void submitReview(
+    Character character, {
+    required Map<String, Object?> formValue,
+  }) {
+    final index = state.map((e) => e.character.id).toList().indexOf(character.id);
+
+    final edit = CharacterReviewModel(
       character: character,
       rating: formValue["rating"]! as int,
       comment: formValue["comment"]! as String,
     );
 
-    final index = state.indexOf(review);
-
     if (index == -1) {
-      state.add(review);
-      print("${character.name}'s review added!");
+      state.add(edit);
+      ref.notifyListeners();
+    } else {
+      state[index] = edit;
       ref.notifyListeners();
     }
   }

@@ -22,12 +22,12 @@ class _RickAndMortyApi implements RickAndMortyApi {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<ApiResponseModel> getCharacters(int page) async {
+  Future<RickAndMortyResponse> getCharacters(int page) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'page': page};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponseModel>(
+    final _options = _setStreamType<RickAndMortyResponse>(
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
@@ -38,9 +38,9 @@ class _RickAndMortyApi implements RickAndMortyApi {
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     final _result = await _dio.fetch<Map<String, Object?>>(_options);
-    late ApiResponseModel _value;
+    late RickAndMortyResponse _value;
     try {
-      _value = ApiResponseModel.fromJson(_result.data!);
+      _value = RickAndMortyResponse.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options, _result);
       rethrow;

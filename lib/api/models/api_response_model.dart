@@ -5,14 +5,14 @@ part "api_response_model.freezed.dart";
 part "api_response_model.g.dart";
 
 @freezed
-abstract class ApiResponseModel with _$ApiResponseModel {
-  const factory ApiResponseModel({
+abstract class RickAndMortyResponse with _$RickAndMortyResponse {
+  const factory RickAndMortyResponse({
     Info? info,
     @Default([]) List<CharacterApiModel> results,
-  }) = _ApiResponseModel;
+  }) = _RickAndMortyResponse;
 
-  factory ApiResponseModel.fromJson(Map<String, Object?> json) =>
-      _$ApiResponseModelFromJson(json);
+  factory RickAndMortyResponse.fromJson(Map<String, Object?> json) =>
+      _$RickAndMortyResponseFromJson(json);
 }
 
 @freezed
@@ -21,5 +21,3 @@ abstract class Info with _$Info {
 
   factory Info.fromJson(Map<String, Object?> json) => _$InfoFromJson(json);
 }
-
-typedef ApiResponse = ApiResponseModel;

@@ -15,11 +15,13 @@ const getCharactersProvider = GetCharactersFamily._();
 final class GetCharactersProvider
     extends
         $FunctionalProvider<
-          AsyncValue<ApiResponse>,
-          ApiResponse,
-          FutureOr<ApiResponse>
+          AsyncValue<List<CharacterModel>>,
+          List<CharacterModel>,
+          FutureOr<List<CharacterModel>>
         >
-    with $FutureModifier<ApiResponse>, $FutureProvider<ApiResponse> {
+    with
+        $FutureModifier<List<CharacterModel>>,
+        $FutureProvider<List<CharacterModel>> {
   const GetCharactersProvider._({
     required GetCharactersFamily super.from,
     required int super.argument,
@@ -43,12 +45,12 @@ final class GetCharactersProvider
 
   @$internal
   @override
-  $FutureProviderElement<ApiResponse> $createElement(
+  $FutureProviderElement<List<CharacterModel>> $createElement(
     $ProviderPointer pointer,
   ) => $FutureProviderElement(pointer);
 
   @override
-  FutureOr<ApiResponse> create(Ref ref) {
+  FutureOr<List<CharacterModel>> create(Ref ref) {
     final argument = this.argument as int;
     return getCharacters(ref, argument);
   }
@@ -64,10 +66,10 @@ final class GetCharactersProvider
   }
 }
 
-String _$getCharactersHash() => r'7b107b1c23768b735a26661e496d7ac252998424';
+String _$getCharactersHash() => r'b778d96218e7a1cf36d5a885af973a0f60f54dec';
 
 final class GetCharactersFamily extends $Family
-    with $FunctionalFamilyOverride<FutureOr<ApiResponse>, int> {
+    with $FunctionalFamilyOverride<FutureOr<List<CharacterModel>>, int> {
   const GetCharactersFamily._()
     : super(
         retry: null,
@@ -90,11 +92,11 @@ const getCharacterProvider = GetCharacterFamily._();
 final class GetCharacterProvider
     extends
         $FunctionalProvider<
-          AsyncValue<Character>,
-          Character,
-          FutureOr<Character>
+          AsyncValue<CharacterModel>,
+          CharacterModel,
+          FutureOr<CharacterModel>
         >
-    with $FutureModifier<Character>, $FutureProvider<Character> {
+    with $FutureModifier<CharacterModel>, $FutureProvider<CharacterModel> {
   const GetCharacterProvider._({
     required GetCharacterFamily super.from,
     required int super.argument,
@@ -118,11 +120,12 @@ final class GetCharacterProvider
 
   @$internal
   @override
-  $FutureProviderElement<Character> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<CharacterModel> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
-  FutureOr<Character> create(Ref ref) {
+  FutureOr<CharacterModel> create(Ref ref) {
     final argument = this.argument as int;
     return getCharacter(ref, argument);
   }
@@ -138,10 +141,10 @@ final class GetCharacterProvider
   }
 }
 
-String _$getCharacterHash() => r'4a985e526c56e6df6dd68ecb9634575bd0603f16';
+String _$getCharacterHash() => r'ca026863a7b513577d6f59e9b48743d101619c1a';
 
 final class GetCharacterFamily extends $Family
-    with $FunctionalFamilyOverride<FutureOr<Character>, int> {
+    with $FunctionalFamilyOverride<FutureOr<CharacterModel>, int> {
   const GetCharacterFamily._()
     : super(
         retry: null,

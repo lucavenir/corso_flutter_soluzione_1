@@ -16,7 +16,7 @@ abstract class RickAndMortyApi {
   factory RickAndMortyApi(Dio dio, {String baseUrl}) = _RickAndMortyApi;
 
   @GET("/character")
-  Future<ApiResponse> getCharacters(@Query("page") int page);
+  Future<RickAndMortyResponse> getCharacters(@Query("page") int page);
 
   @GET("/character/{id}")
   Future<Character> getCharacter(@Path("id") int id);

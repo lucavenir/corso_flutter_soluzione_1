@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$CharacterReviewModel {
 
- Character get character; int get rating; String get comment;
+ CharacterModel get character; int get rating; String get comment;
 /// Create a copy of CharacterReviewModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -45,7 +45,7 @@ abstract mixin class $CharacterReviewModelCopyWith<$Res>  {
   factory $CharacterReviewModelCopyWith(CharacterReviewModel value, $Res Function(CharacterReviewModel) _then) = _$CharacterReviewModelCopyWithImpl;
 @useResult
 $Res call({
- Character character, int rating, String comment
+ CharacterModel character, int rating, String comment
 });
 
 
@@ -65,7 +65,7 @@ class _$CharacterReviewModelCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') @override $Res call({Object? character = null,Object? rating = null,Object? comment = null,}) {
   return _then(_self.copyWith(
 character: null == character ? _self.character : character // ignore: cast_nullable_to_non_nullable
-as Character,rating: null == rating ? _self.rating : rating // ignore: cast_nullable_to_non_nullable
+as CharacterModel,rating: null == rating ? _self.rating : rating // ignore: cast_nullable_to_non_nullable
 as int,comment: null == comment ? _self.comment : comment // ignore: cast_nullable_to_non_nullable
 as String,
   ));
@@ -161,7 +161,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Character character,  int rating,  String comment)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( CharacterModel character,  int rating,  String comment)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _CharacterReviewModel() when $default != null:
 return $default(_that.character,_that.rating,_that.comment);case _:
@@ -182,7 +182,7 @@ return $default(_that.character,_that.rating,_that.comment);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Character character,  int rating,  String comment)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( CharacterModel character,  int rating,  String comment)  $default,) {final _that = this;
 switch (_that) {
 case _CharacterReviewModel():
 return $default(_that.character,_that.rating,_that.comment);case _:
@@ -202,7 +202,7 @@ return $default(_that.character,_that.rating,_that.comment);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Character character,  int rating,  String comment)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( CharacterModel character,  int rating,  String comment)?  $default,) {final _that = this;
 switch (_that) {
 case _CharacterReviewModel() when $default != null:
 return $default(_that.character,_that.rating,_that.comment);case _:
@@ -220,7 +220,7 @@ class _CharacterReviewModel implements CharacterReviewModel {
    _CharacterReviewModel({required this.character, required this.rating, required this.comment});
   
 
-@override final  Character character;
+@override final  CharacterModel character;
 @override final  int rating;
 @override final  String comment;
 
@@ -254,7 +254,7 @@ abstract mixin class _$CharacterReviewModelCopyWith<$Res> implements $CharacterR
   factory _$CharacterReviewModelCopyWith(_CharacterReviewModel value, $Res Function(_CharacterReviewModel) _then) = __$CharacterReviewModelCopyWithImpl;
 @override @useResult
 $Res call({
- Character character, int rating, String comment
+ CharacterModel character, int rating, String comment
 });
 
 
@@ -274,7 +274,7 @@ class __$CharacterReviewModelCopyWithImpl<$Res>
 @override @pragma('vm:prefer-inline') $Res call({Object? character = null,Object? rating = null,Object? comment = null,}) {
   return _then(_CharacterReviewModel(
 character: null == character ? _self.character : character // ignore: cast_nullable_to_non_nullable
-as Character,rating: null == rating ? _self.rating : rating // ignore: cast_nullable_to_non_nullable
+as CharacterModel,rating: null == rating ? _self.rating : rating // ignore: cast_nullable_to_non_nullable
 as int,comment: null == comment ? _self.comment : comment // ignore: cast_nullable_to_non_nullable
 as String,
   ));

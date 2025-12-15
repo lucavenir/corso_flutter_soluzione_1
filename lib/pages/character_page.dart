@@ -21,7 +21,6 @@ class _CharacterPageState extends ConsumerState<CharacterPage> {
   @override
   Widget build(BuildContext context) {
     final character = ref.watch(getCharacterProvider(widget.id));
-    final reviews = ref.watch(reviewProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -53,10 +52,10 @@ class _CharacterPageState extends ConsumerState<CharacterPage> {
               ),
               const SizedBox(height: 32),
               ElevatedButton.icon(
-                onPressed: () {
-                  showReviewDialog(value);
+                onPressed: () async {
+                  await showReviewDialog(value);
                 },
-                label: const Text("add a review"),
+                label: const Text("submit review"),
                 icon: const Icon(Icons.add),
               ),
             ],
@@ -76,7 +75,7 @@ class _CharacterPageState extends ConsumerState<CharacterPage> {
 
     if (result == null) return;
 
-    ref.read(reviewProvider.notifier).addReview(value, result);
+    ref.read(reviewProvider.notifier).submitReview(value, formValue: result);
   }
 }
 
